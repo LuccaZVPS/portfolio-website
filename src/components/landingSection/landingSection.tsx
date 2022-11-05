@@ -1,5 +1,4 @@
 import * as styled from "./styles";
-import ParticlesBackground from "../particlesBackground/particlesBackground";
 import { BsArrowDown } from "react-icons/bs";
 export default function LandingSection(): JSX.Element {
   return (

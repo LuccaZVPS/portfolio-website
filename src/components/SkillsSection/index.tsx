@@ -1,7 +1,5 @@
 import { EmojiText } from "../EmojiText";
 import Heading from "../Heading/Heading";
-import { DiReact, DiHtml5, DiCss3Full, DiSass } from "react-icons/di";
-import { SiStyledcomponents, SiTypescript } from "react-icons/si";
 import { Container } from "./styles";
 import { useEffect, useRef } from "react";
 export function SkillsSection() {
