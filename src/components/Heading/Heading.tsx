@@ -4,7 +4,7 @@ type props = {
   text: string;
 };
 export default function Heading(props: props): JSX.Element {
-  const time = props.text.length > 20 ? "1.2s" : "0.8s"
+  const time = props.text.length > 20 ? "1s" : "0.6s"
   useEffect(() => {
     window.addEventListener("scroll", () => {
       var hiddenHeadings = document.querySelectorAll(".hidden");
