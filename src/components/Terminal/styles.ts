@@ -1,0 +1,41 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  border: 15px 15px 0 0;
+  border: 1px solid #171a1b;
+  width: 862px;
+  height: 450px;
+  background-color: #0C1212;
+  border-radius: 15px;
+  border: solid 0.1px #4a4a4a;
+
+  .header {
+    padding-top: 7px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    .btns {
+      margin-left: 24px;
+      position: absolute;
+      left: 0;
+      display: flex;
+      gap: 8px;
+      span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+      .red {
+        background-color: #ff5f56;
+      }
+      .orange {
+        background-color: #ffbd2e;
+      }
+      .green {
+        background-color: #27c93f;
+      }
+    }
+  }
+`;
