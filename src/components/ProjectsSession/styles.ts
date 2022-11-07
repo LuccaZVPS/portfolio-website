@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { Container as terminal } from "../Terminal/styles";
 export const Container = styled.section`
   width: 100%;
-  min-height: 100vh;
-  background-color: ${({ theme }) => theme.colors.background};
   h2 {
     margin-top: 30px;
   }
@@ -12,7 +10,7 @@ export const Container = styled.section`
     padding: 20px 0 20px 0;
   }
 
-  @media (max-width: 730px) {
+  @media (max-width: 750px) {
     .slider {
       overflow: auto;
     }
@@ -23,7 +21,7 @@ export const CardsContainer = styled.div`
   margin-top: 80px;
   grid-template-columns: repeat(auto-fill, minMax(360px, 1fr));
   justify-items: center;
-  row-gap: 40px;
+  gap: 10px;;
   ${terminal} {
     width: auto;
     height: auto;
@@ -55,7 +53,7 @@ export const CardsContainer = styled.div`
     gap: 20px;
   }
 
-  @media (max-width: 730px) {
+  @media (max-width: 750px) {
     display: flex;
     min-width: fit-content;
     overflow-x: scroll;

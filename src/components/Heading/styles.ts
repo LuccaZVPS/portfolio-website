@@ -8,7 +8,9 @@ export const container = styled.div<props>`
   color: ${({ theme }) => theme.colors.primary};
   width: fit-content;
   height: fit-content;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:left;
   h2 {
     position: relative;
 
@@ -34,7 +36,6 @@ export const container = styled.div<props>`
     display: flex;
     font-weight: bold;
     color: white;
-    text-align: center;
     font-size: 2.2rem;
 
     @media (max-width: 1450px) {
@@ -44,8 +45,16 @@ export const container = styled.div<props>`
     @media (max-width: 1200px) {
       font-size: 1.6rem;
     }
+    @media (max-width: 750px) {
+      font-size: 1.4rem;
+    }
     @media (max-width: 500px) {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
+    }
+    @media (max-width: 400px) {
+      ::before {
+        display: none;
+    }
     }
     ::before {
       animation: type ${({time}) => time} steps(${({characters}) => characters}) forwards, blink infinite 1.5s 1s;

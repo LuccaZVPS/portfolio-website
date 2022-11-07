@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding: 12px;
   border-radius: 12px;
   color: ${({ theme }) => theme.colors.txt};
-  @media (max-width: 730px) {
+  @media (max-width: 750px) {
     padding: 9px;
     font-size: 0.95rem;
   

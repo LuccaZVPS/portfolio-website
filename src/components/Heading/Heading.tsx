@@ -1,25 +1,13 @@
 import { useEffect } from "react";
+import { scrollAnimation } from "../../functions/scrollAnimation";
 import * as styled from "./styles";
 type props = {
   text: string;
 };
 export default function Heading(props: props): JSX.Element {
-  const time = props.text.length > 20 ? "1s" : "0.6s"
+  const time = props.text.length > 20 ? "1.4s" : "0.6s";
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      var hiddenHeadings = document.querySelectorAll(".hidden");
-      for (let index = 0; index < hiddenHeadings.length; index++) {
-        var windowHeight = window.innerHeight;
-        var revealTop = hiddenHeadings[index].getBoundingClientRect().top;
-        var reavealPoint = 100;
-
-        if (revealTop < windowHeight - reavealPoint) {
-          hiddenHeadings[index].className = "visible";
-        } else {
-          hiddenHeadings[index].className = "hidden";
-        }
-      }
-    });
+    scrollAnimation("hidden", "visible", 20);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (

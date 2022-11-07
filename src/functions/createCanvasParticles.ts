@@ -3,6 +3,8 @@ export default function CreateCanvasParticles() {
   const ctx = canvas.getContext("2d");
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth;
+  var numberOfParticles = (canvas.height * canvas.width) / 5000;
+
   let particlesArray: any;
   let mousePosition = {
     x: canvas.width / 2,
@@ -33,8 +35,7 @@ export default function CreateCanvasParticles() {
   }
 
   if (window.innerWidth < 700) {
-    position1.radius = (canvas.height / 20) * (canvas.width / 40);
-    mousePosition.radius = (canvas.height / 0.001) * (canvas.width / -10);
+    numberOfParticles = 0
   }
 
   class Particle {
@@ -91,7 +92,6 @@ export default function CreateCanvasParticles() {
 
   function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 5000;
 
     for (let i = 0; i < numberOfParticles; i++) {
       let size = Math.random() * 0.2 + 1;
@@ -102,7 +102,11 @@ export default function CreateCanvasParticles() {
       let directionX = Math.random() * 5 - 2.2;
       let directionY = Math.random() * 5 - 2.2;
       let color = "rgb(81, 162, 233)";
+      const random = Math.floor(Math.random() * 10)
+      if (random > 7) {
+       color = "rgb(232, 73, 70)"
 
+      }
       particlesArray.push(
         new Particle(x, y, directionX, directionY, size, color)
       );

@@ -1,3 +1,4 @@
+import { AboutSection } from "../AboutSection";
 import LandingSection from "../landingSection/landingSection";
 import ParticlesBackground from "../particlesBackground/particlesBackground";
 import { ProjectsSession } from "../ProjectsSession";
@@ -7,10 +8,11 @@ import { Container } from "./styles";
 export function Wrapper() {
   return (
     <Container>
-      <ParticlesBackground/>
+      <ParticlesBackground />
       <LandingSection />
+      <AboutSection />
       <ProjectsSession />
-      <SkillsSection/>
+      <SkillsSection />
     </Container>
   );
 }

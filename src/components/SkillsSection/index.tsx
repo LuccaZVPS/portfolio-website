@@ -73,7 +73,7 @@ export function SkillsSection() {
             </div>
             <div>
               <img src="/styled.svg" alt="" />
-              <p>Styled Components</p>
+              <p>Styled</p>
             </div>
             <div>
               <img src="/sass.svg" alt="" />

@@ -9,7 +9,6 @@ export const container = styled.canvas`
   opacity: 0;
   position: absolute;
   top: 0;
-  z-index: 0;
   @keyframes hideParticless {
     0% {
       opacity: 0;
