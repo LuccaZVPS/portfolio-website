@@ -3,7 +3,7 @@ export default function CreateCanvasParticles() {
   const ctx = canvas.getContext("2d");
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth;
-  var numberOfParticles = (canvas.height * canvas.width) / 5000;
+  var numberOfParticles = (canvas.height * canvas.width) / 4500;
 
   let particlesArray: any;
   let mousePosition = {
@@ -138,7 +138,7 @@ export default function CreateCanvasParticles() {
         if (distance < (canvas.width / 7) * (canvas.height / 7)) {
           if (ctx !== null) {
             // prettier-ignore
-            opacityValue = 1 - (distance / 9000);
+            opacityValue = 1 - (distance / 8000);
 
             let p1x = position1.x - particlesArray[a].x;
             let p1y = position1.y - particlesArray[a].y;
@@ -149,7 +149,7 @@ export default function CreateCanvasParticles() {
             //distanceRatio = 0;
             //}
 
-            ctx.strokeStyle = `rgb(81, 162, 233, ${opacityValue / 3})`;
+            ctx.strokeStyle = `rgb(81, 162, 233, ${opacityValue / 2})`;
 
             ctx.lineWidth = 0.3;
             ctx.beginPath();

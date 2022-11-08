@@ -7,9 +7,11 @@ export const scrollAnimation = (hiddenClass:string,visibleClass:string,reavealPo
           var revealTop = hiddenElements[index].getBoundingClientRect().top;
   
           if (revealTop < windowHeight - reavealPoint) {
-            hiddenElements[index].className = visibleClass;
+            hiddenElements[index].classList.remove(hiddenClass);
+
+            hiddenElements[index].classList.add(visibleClass);
           } else {
-            hiddenElements[index].className = hiddenClass;
+            hiddenElements[index].classList.add(hiddenClass) ;
           }
         }
       });

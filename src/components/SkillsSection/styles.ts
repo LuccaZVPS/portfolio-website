@@ -47,21 +47,30 @@ h2{
     }
 }
 
+.visible-skills{
+    animation: hideElement 1.5s forwards;
 
+}
+.hidden-about{
+    opacity: 0;
+}
 .front{
     display: flex;
     width: calc(150px * 7);
     position: relative;
-    height: 100px;
+    height: auto;
    overflow-y: visible;
    overflow-x: hidden;
    justify-content: center;
+   height: 100px;
     .imgs-tech{
         display: flex;
         position: absolute;
     }
 }
 .back{
+    
+
     display: flex;
     width: calc(150px * 5);
     position: relative;
@@ -103,7 +112,7 @@ h2{
             
             div{
                 img{
-                    width: 55px;
+                    width: 75px;
                     
                 }
                 p{
@@ -125,6 +134,7 @@ h2{
     }
     .front{
         width: calc(70px * 7);
+        display: flex;
         .imgs-tech{
             div{
                 img{

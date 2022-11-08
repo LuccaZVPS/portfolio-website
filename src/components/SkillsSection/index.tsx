@@ -2,13 +2,15 @@ import { EmojiText } from "../EmojiText";
 import Heading from "../Heading/Heading";
 import { Container } from "./styles";
 import { useEffect, useRef } from "react";
+import { scrollAnimation } from "../../functions/scrollAnimation";
 export function SkillsSection() {
   const carrousel = useRef<HTMLDivElement | null>(null);
   const list = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     infiniteSlider();
-  }, []);
+    scrollAnimation("hidden-about", "visible-skills", 100);
+  });
 
   const infiniteSlider = () => {
     if (!carrousel.current || !list.current) {
@@ -57,7 +59,7 @@ export function SkillsSection() {
 
       <div className="content">
         <h3>Front End</h3>
-        <div className="front">
+        <div className="front hidden-about">
           <div className="imgs-tech">
             <div>
               <img src="/ts.svg" alt="" />
@@ -94,7 +96,7 @@ export function SkillsSection() {
         </div>
         <h3>Back End</h3>
 
-        <div className="back" ref={carrousel}>
+        <div className="back hidden-about" ref={carrousel}>
           <div className="imgs-tech" ref={list}>
             <div>
               <img src="/npm.svg" alt="" />

@@ -13,7 +13,8 @@ export const container = styled.div<props>`
   justify-content:left;
   h2 {
     position: relative;
-
+    z-index:200;
+    position: absolute;
     ::before {
       position: absolute;
       content: "";
@@ -23,6 +24,7 @@ export const container = styled.div<props>`
       left: 0;
       background-color: ${({ theme }) => theme.colors.background};
     }
+  
   }
 
   .hidden {

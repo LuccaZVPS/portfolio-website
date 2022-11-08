@@ -8,12 +8,13 @@ export const Container = styled.div`
   background: ${({ theme }) => theme.colors.background};
   position: relative;
   overflow: hidden;
-  gap: 80px;
+  gap: 120px;
   @media (max-width: 1450px) {
     padding: 0px 100px 0px 100px;
   }
 
   @media (max-width: 750px) {
     padding: 0px 20px 0px 20px;
+    
   }
 `;

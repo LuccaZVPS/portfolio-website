@@ -1,4 +1,6 @@
 import { AboutSection } from "../AboutSection";
+import { ContactSession } from "../ContactSession";
+import { Footer } from "../Footer";
 import LandingSection from "../landingSection/landingSection";
 import ParticlesBackground from "../particlesBackground/particlesBackground";
 import { ProjectsSession } from "../ProjectsSession";
@@ -13,6 +15,8 @@ export function Wrapper() {
       <AboutSection />
       <ProjectsSession />
       <SkillsSection />
+      <ContactSession />
+      <Footer />
     </Container>
   );
 }

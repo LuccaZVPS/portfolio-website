@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 display: flex;
-align-items: center;
+display: flex;
+align-items: flex-start;
 .about-img{
     width: 50%;
     display: flex;
@@ -20,11 +21,18 @@ align-items: center;
     flex-direction: column;
     gap: 30px;
     ul{
+        opacity: 0;
         display: flex;
         flex-direction: column;
         color: ${({theme}) => theme.colors.txt2};
         gap: 30px;
         font-size: 1.05rem;
+    }
+    .hidden-about{
+        opacity: 0;
+    }
+    .visible-about{
+        animation: hideElement 1.5s forwards;
     }
 }
 
@@ -98,4 +106,7 @@ align-items: center;
    }
 }
 }
+
+
+
 `;
