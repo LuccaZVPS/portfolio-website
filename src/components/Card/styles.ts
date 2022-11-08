@@ -41,7 +41,7 @@ export const Container = styled.div`
     .tags {
       height: 50px;
       gap: 5px;
-      font-size: 0.9rem;
+      font-size: 1.2rem;
       div {
         padding: 2px 6px 2px 6px;
       }
@@ -69,7 +69,7 @@ export const Container = styled.div`
     .tags {
       height: 40px;
       gap: 5px;
-      font-size: 0.75rem;
+      font-size: 1.1rem;
       div {
         padding: 2px 4px 2px 4px;
       }

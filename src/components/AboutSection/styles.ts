@@ -3,11 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
 display: flex;
 display: flex;
-align-items: flex-start;
+align-items: center;
 .about-img{
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    
     .img{
         width: 350px;
         height: 350px;

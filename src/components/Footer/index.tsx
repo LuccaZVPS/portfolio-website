@@ -12,12 +12,12 @@ export function Footer() {
 
       <div className="social">
         <div>
-          <a href="" target={"_blank"}>
+          <a href="#a" target={"_blank"}>
             <BsGithub />
           </a>
         </div>
         <div>
-          <a href="" target={"_blank"}>
+          <a href="#a" target={"_blank"}>
             <TfiLinkedin />
           </a>
         </div>
