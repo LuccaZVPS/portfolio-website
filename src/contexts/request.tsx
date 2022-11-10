@@ -11,7 +11,6 @@ export const RequestContext = ({ children }: props) => {
       setRequest(r.data as unknown as request);
     });
   }, []);
-  console.log(request);
 
   if (request.about) {
     return <Context.Provider value={request}>{children}</Context.Provider>;
