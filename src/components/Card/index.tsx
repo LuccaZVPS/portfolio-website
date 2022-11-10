@@ -14,12 +14,16 @@ export function Card({ img, link, title, txt, icons }: project) {
         <div className="desc">{txt}</div>
         <div className="tags">
           {icons.map((icon) => (
-            <img src={"http://localhost:3000" + icon} key={icon} alt="" />
+            <img
+              src={(process.env.REACT_APP_API_DOMAIN as string) + icon}
+              key={icon}
+              alt=""
+            />
           ))}
         </div>
         <img
           className="image"
-          src={"http://localhost:3000" + img}
+          src={(process.env.REACT_APP_API_DOMAIN as string) + img}
           alt={title}
         />
       </Container>

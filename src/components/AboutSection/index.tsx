@@ -7,7 +7,7 @@ export function AboutSection() {
   return (
     <Container id="about">
       <div className="about-img">
-        <img src="/eu.jpeg" alt="" />
+        <img src={"https://api-lucca.netlify.app/eu.jpeg"} alt="" />
       </div>
       <div className="about-content">
         <EmojiText txt="🧐 Sobre mim" />

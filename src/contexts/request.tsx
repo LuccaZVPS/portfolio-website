@@ -7,7 +7,7 @@ interface props {
 export const RequestContext = ({ children }: props) => {
   const [request, setRequest] = useState<request>({} as request);
   useMemo(() => {
-    axios.get("http://localhost:3000/api/hello").then((r) => {
+    axios.get(process.env.REACT_APP_API_URL as string).then((r) => {
       setRequest(r.data as unknown as request);
     });
   }, []);

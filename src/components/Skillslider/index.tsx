@@ -76,7 +76,10 @@ export const SkillSlider = ({ direction, size, title, skills }: props) => {
         <div className="imgs-tech" ref={list}>
           {skills.map((skill) => (
             <div key={skill[0]}>
-              <img src={"http://localhost:3000" + skill[1]} alt="" />
+              <img
+                src={(process.env.REACT_APP_API_DOMAIN as string) + skill[1]}
+                alt=""
+              />
               <p>{skill[0]}</p>
             </div>
           ))}
