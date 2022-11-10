@@ -11,15 +11,19 @@ export function Footer() {
       </a>
 
       <div className="social">
-        <div>
-          <a href="#a" target={"_blank"}>
-            <BsGithub />
-          </a>
+        <div
+          onClick={() => {
+            window.open("https://github.com/LuccaZVPS");
+          }}
+        >
+          <BsGithub />
         </div>
-        <div>
-          <a href="#a" target={"_blank"}>
-            <TfiLinkedin />
-          </a>
+        <div
+          onClick={() => {
+            window.open("https://www.linkedin.com/in/lucca-santos-12b21721b/");
+          }}
+        >
+          <TfiLinkedin />
         </div>
       </div>
     </Container>

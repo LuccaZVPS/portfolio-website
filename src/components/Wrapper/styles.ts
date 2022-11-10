@@ -8,7 +8,7 @@ export const Container = styled.div`
   background: ${({ theme }) => theme.colors.background};
   position: relative;
   overflow: hidden;
-  gap: 120px;
+  gap: 160px;
   @media (max-width: 1450px) {
     padding: 0px 100px 0px 100px;
   }

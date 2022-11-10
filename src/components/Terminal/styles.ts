@@ -3,12 +3,16 @@ import styled from "styled-components";
 export const Container = styled.div`
   border: 15px 15px 0 0;
   border: 1px solid #171a1b;
-  width: 862px;
-  height: 450px;
+  width: auto;
+  height: auto;
   background-color: #0C1212;
   border-radius: 15px;
   border: solid 0.1px #4a4a4a;
   margin-bottom: 30px;
+  transition: 0.3s;
+  :hover {
+    background-color: #161b24;
+  }
   .header {
     padding-top: 7px;
     display: flex;

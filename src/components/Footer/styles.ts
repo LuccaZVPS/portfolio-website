@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
 border-top: 1px solid ${({theme}) => theme.colors.hover2};
 color: ${({theme}) => theme.colors.txt};
-height: 50px;
+height: 70px;
 display: flex;
 align-items: center;
 width: 100%;
@@ -12,6 +12,7 @@ bottom: 0;
 left: 0;
 padding: 0px 25px 0px 25px;
 justify-content: space-between;
+background-color: #0C1212;
 .top{
     background-color: ${({theme}) => theme.colors.secondary};
     width: 30px;
@@ -34,6 +35,7 @@ justify-content: space-between;
     gap: 10px;
 
     div{
+        cursor: pointer;
         width: 30px;
         height: 30px;
         background-color: ${({theme}) => theme.colors.txt};
@@ -41,9 +43,7 @@ justify-content: space-between;
         display: flex;
         justify-content: center;
         align-items: center;
-        a{
-            display: flex;
-            align-items: center;
+        svg{ 
             color:  ${({theme}) => theme.colors.background};;
         }
 
@@ -67,7 +67,10 @@ justify-content: space-between;
         div{
             width: 25px;
             height: 25px;
-            font-size: 1.1rem;
+            svg{
+                font-size: 1.1rem;
+
+            }
         }
     }
 

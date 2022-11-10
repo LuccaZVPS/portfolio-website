@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 360px;
-  height: 460px;
   border-radius: 15px;
   padding: 25px 30px 25px 30px;
   color: ${({ theme }) => theme.colors.txt};
+  cursor: pointer;
+  
   .desc {
     color: ${({ theme }) => theme.colors.txt2};
     height: 100px;
@@ -13,15 +14,20 @@ export const Container = styled.div`
     margin-top: 10px;
   }
   .tags {
+    width: 100%;
     height: 70px;
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 5px;
-    font-size: 1.6rem;
+    img{
+      width: 30px;
+      height: 30px;
+      border-radius:6px;
+    }
   }
   .image {
-    height: 200px;
+    height: auto;
     width: 100%;
     background-color: ${({ theme }) => theme.colors.hover2};
     border-radius: 15px;
@@ -29,7 +35,6 @@ export const Container = styled.div`
 
   @media (max-width: 1900px) {
     width: 320px;
-    height: 410px;
     padding: 25px 25px 25px 25px;
 
     .desc {
@@ -40,22 +45,19 @@ export const Container = styled.div`
     }
     .tags {
       height: 50px;
-      gap: 5px;
-      font-size: 1.2rem;
-      div {
-        padding: 2px 6px 2px 6px;
+      img{
+        width: 27px;
+        height: 27px;;
       }
-      margin-bottom: 5px;
     }
     .image {
-      height: 180px;
+      height: auto;
       width: 100%;
     }
   }
 
   @media (max-width: 1450px) {
     width: 260px;
-    height: 340px;
     padding: 15px 20px 15px 20px;
     h3 {
       font-size: 1rem;
@@ -68,15 +70,15 @@ export const Container = styled.div`
     }
     .tags {
       height: 40px;
-      gap: 5px;
-      font-size: 1.1rem;
-      div {
-        padding: 2px 4px 2px 4px;
-      }
       margin-bottom: 5px;
+      img{
+        width: 22px;
+        height: 22px;;
+      }
+
     }
     .image {
-      height: 150px;
+      height: auto;
       width: 100%;
     }
   }

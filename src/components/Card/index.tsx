@@ -1,22 +1,27 @@
 import { Terminal } from "../Terminal";
 import { Container } from "./styles";
-import { SiSocketdotio, SiReact, SiTypescript } from "react-icons/si";
-export function Card() {
+import { project } from "../../contexts/request";
+
+export function Card({ img, link, title, txt, icons }: project) {
   return (
     <Terminal>
-      <Container>
-        <h3>Pomodoro </h3>
-        <div className="desc">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem ipsam
-          at, assumenda esse inventore error quidem harum! Necessitatibus harum
-          ipsum eos?
-        </div>
+      <Container
+        onClick={() => {
+          window.open(link);
+        }}
+      >
+        <h3>{title} </h3>
+        <div className="desc">{txt}</div>
         <div className="tags">
-          <SiSocketdotio />
-          <SiReact />
-          <SiTypescript />
+          {icons.map((icon) => (
+            <img src={"http://localhost:3000" + icon} key={icon} alt="" />
+          ))}
         </div>
-        <div className="image"></div>
+        <img
+          className="image"
+          src={"http://localhost:3000" + img}
+          alt={title}
+        />
       </Container>
     </Terminal>
   );

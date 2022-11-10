@@ -25,7 +25,7 @@ export default function LandingSection(): JSX.Element {
         <styled.description>
           <p>Desenvolvedor web fullstack</p>
         </styled.description>
-        <a href="#abc" onClick={scroll}>
+        <a href="#sobre" onClick={scroll}>
           Sobre Mim <BsArrowDown />
         </a>
       </styled.content>

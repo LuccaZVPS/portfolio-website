@@ -3,7 +3,7 @@ export default function CreateCanvasParticles() {
   const ctx = canvas.getContext("2d");
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth;
-  var numberOfParticles = (canvas.height * canvas.width) / 4500;
+  var numberOfParticles = (canvas.height * canvas.width) / 3500;
 
   let particlesArray: any;
   let mousePosition = {
@@ -18,18 +18,25 @@ export default function CreateCanvasParticles() {
     radius: (canvas.height / 75) * (canvas.width / 80),
   };
 
-  window.addEventListener("mousemove", (e) => {
-    mousePosition.x = e.x;
-    mousePosition.y = e.y;
-    position1.x = e.x;
-    position1.y = e.y;
-  });
+  setTimeout(() => {
+    window.addEventListener("mousemove", (e) => {
+      mousePosition.x = e.x;
+      mousePosition.y = e.y;
+      position1.x = e.x;
+      position1.y = e.y;
+    });
+  },3500)
+  
 
-  if (window.innerWidth < 1600) {
+  if (window.innerWidth < 1700) {
+     numberOfParticles = (canvas.height * canvas.width) / 4500;
+
     position1.radius = (canvas.height / 50) * (canvas.width / 80);
     mousePosition.radius = (canvas.height / 0.001) * (canvas.width / 80);
   }
   if (window.innerWidth < 1200) {
+    numberOfParticles = (canvas.height * canvas.width) / 4700;
+
     position1.radius = (canvas.height / 30) * (canvas.width / 80);
     mousePosition.radius = (canvas.height / 0.001) * (canvas.width / -10);
   }

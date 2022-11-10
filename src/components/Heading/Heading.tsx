@@ -7,7 +7,7 @@ type props = {
 export default function Heading(props: props): JSX.Element {
   const time = props.text.length > 20 ? "1.4s" : "0.6s";
   useEffect(() => {
-    scrollAnimation("hidden", "visible", 20);
+    scrollAnimation("hidden", "visible", 120);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (

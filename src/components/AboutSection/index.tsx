@@ -1,36 +1,21 @@
-import { useEffect } from "react";
-import { scrollAnimation } from "../../functions/scrollAnimation";
+import { useRequest } from "../../contexts/request";
 import { EmojiText } from "../EmojiText";
 import Heading from "../Heading/Heading";
 import { Container } from "./styles";
 
 export function AboutSection() {
-  useEffect(() => {
-    scrollAnimation("hidden-about", "visible-about", 350);
-  }, []);
   return (
-    <Container>
+    <Container id="about">
       <div className="about-img">
-        <div className="img"></div>
+        <img src="/eu.jpeg" alt="" />
       </div>
       <div className="about-content">
         <EmojiText txt="🧐 Sobre mim" />
         <Heading text="Lucca Zavarize Pereira Santos" />
-        <ul className="hidden-about" id="about">
-          <li>👋 Hello world, pode me chamar apenas de Henrique. Prazer!</li>
-          <li>
-            👨‍💻 Há mais de 2 anos desenvolvendo e programando interfaces com
-            JavaScript, ReactJS e Typescript.
-          </li>
-          <li>
-            🎓 Graduado em Análise e Desenvolvimento de Sistemas pela Fatec de
-            São José dos Campos.
-          </li>
-          <li>
-            💡 Interesses em desenvolvimento Front-end com React JS, React
-            Native, Vue JS e UX/UI Design.
-          </li>
-          <li>🚀 Tentando ser um pouquinho melhor do que ontem todos dias.</li>
+        <ul>
+          {useRequest().about.map((txt) => (
+            <li key={txt}>{txt}</li>
+          ))}
         </ul>
       </div>
     </Container>
