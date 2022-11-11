@@ -16,7 +16,9 @@ export function ProjectsSession() {
       var windowHeight = window.innerHeight;
       var revealTop = div.current.getBoundingClientRect().top;
       var reavealPoint = 400;
-
+      if (window.innerWidth < 1600) {
+        reavealPoint = reavealPoint / 1.5;
+      }
       if (revealTop < windowHeight - reavealPoint) {
         if (div.current.className) {
           div.current.classList.add("finished");

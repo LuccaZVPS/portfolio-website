@@ -25,19 +25,22 @@ button{
     outline: none;
     background: transparent;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: ${({theme}) => theme.colors.txt};
+    font-weight: bold;
     svg{
         font-size: 1.4rem;
-        color: ${({theme}) => theme.colors.txt2};
-
+        transition: 0.2s;
     }
     :hover{
-        transform: scale(1.1);
         svg{
-            color: ${({theme}) => theme.colors.txt};
-
+            transform: translateX(10px);
         }
-
     }
+
 }
 
 
@@ -51,9 +54,15 @@ button{
     svg{
         font-size: 1.7rem;
     }
-    button svg{
+    button{ 
+        font-size: 0.75rem;
+        svg{
         font-size:1.3rem;
     }
+}
+
+
+
     height: 220px;
 }
 

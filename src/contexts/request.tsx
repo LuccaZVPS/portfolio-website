@@ -42,7 +42,7 @@ export interface skills {
   back: Array<Array<string>>;
 }
 export interface contact {
-  linkedin: string;
-  email: string;
-  number: string;
+  linkedin: string[];
+  email: string[];
+  number: string[];
 }

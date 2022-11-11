@@ -11,7 +11,7 @@ export function ContactSession() {
     <Container>
       <ToastContainer
         position="top-right"
-        autoClose={2000}
+        autoClose={1500}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -21,7 +21,6 @@ export function ContactSession() {
         pauseOnHover
         theme="light"
       />
-      {/* Same as */}
       <ToastContainer />
       <EmojiText txt="📬 Contato" />
       <Heading text="Vamos conversar!" />
@@ -30,20 +29,21 @@ export function ContactSession() {
           <Contactbox
             Icon={HiOutlineMail}
             title={"E-mail"}
-            txt={useRequest().contact.email}
-            link=""
+            txt={useRequest().contact.email[0]}
+            link={useRequest().contact.email[1] ?? ""}
+            copy={"Email copiado!"}
           />
           <Contactbox
             Icon={AiOutlineWhatsApp}
             title={"WhatsApp"}
-            txt={useRequest().contact.number}
-            link=""
+            txt={useRequest().contact.number[0]}
+            link={useRequest().contact.number[1]}
           />
           <Contactbox
             Icon={AiFillLinkedin}
             title={"Linkedin"}
-            txt={useRequest().contact.linkedin}
-            link=""
+            txt={useRequest().contact.linkedin[0]}
+            link={useRequest().contact.linkedin[1]}
           />
         </div>
       </div>
