@@ -172,7 +172,7 @@ export default function CreateCanvasParticles() {
             ctx.lineWidth = 0.3;
 
             if (window.innerWidth < 1600) {
-              ctx.strokeStyle = `rgb(81, 162, 233, ${opacityValue / 2})`;
+              ctx.strokeStyle = `rgb(81, 162, 233, ${opacityValue / 1.4})`;
             }
 
             if (window.innerWidth < 1400) {
