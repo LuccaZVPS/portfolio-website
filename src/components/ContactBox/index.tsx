@@ -16,7 +16,7 @@ interface ContactboxProps {
 
 export function Contactbox({ link, title, txt, Icon }: ContactboxProps) {
   useEffect(() => {
-    scrollAnimation("hidden-box", "visible-box", 300);
+    scrollAnimation("hidden-box", "visible-box", 250);
   });
   const copy = () => {
     navigator.clipboard.writeText(txt);

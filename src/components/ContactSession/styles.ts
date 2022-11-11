@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column;
 gap: 20px;
 margin-bottom: 80px;
-min-height: 65vh;
+min-height: 70vh;
 align-items: center;
 text-align: center;
 

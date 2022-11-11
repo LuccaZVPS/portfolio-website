@@ -54,8 +54,16 @@ export const content = styled.div`
     svg {
       font-size: 1.4rem;
     }
+    @media (max-width: 1900px) {
+      width: 180px;
+      height: 2.4rem;
+      font-size: 1.1rem;
+      svg {
+        font-size: 1.1rem;
+      }
+    }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1450px) {
       width: 170px;
       height: 2.2rem;
       font-size: 1rem;
@@ -99,6 +107,18 @@ export const name = styled.div`
   }
   & {
     animation: hideName 1s;
+  }
+  @media (max-width: 1900px) {
+    h1,
+    span {
+      font-size: 2.6rem;
+    }
+  }
+  @media (max-width: 1450px) {
+    h1,
+    span {
+      font-size: 2.8rem;
+    }
   }
 
   @media (max-width: 550px) {

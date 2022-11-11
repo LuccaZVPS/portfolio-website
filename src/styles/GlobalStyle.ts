@@ -20,11 +20,11 @@ export const GlobalStyle = createGlobalStyle`
         position: relative;
         ::before{
             content: "";
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             position: absolute;
-            left: calc(50% - 75px);
-            top: calc(50% - 75px);
+            left: calc(50% - 50px);
+            top: calc(50% - 50px);
             border-radius: 50%;
             background: transparent;
             border: solid 3px transparent;

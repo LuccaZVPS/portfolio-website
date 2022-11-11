@@ -3,7 +3,7 @@ export default function CreateCanvasParticles() {
   const ctx = canvas.getContext("2d");
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth;
-  var numberOfParticles = (canvas.height * canvas.width) / 3500;
+  var numberOfParticles = (canvas.height * canvas.width) / 4000;
 
   let particlesArray: any;
   let mousePosition = {
@@ -28,18 +28,19 @@ export default function CreateCanvasParticles() {
   },3500)
   
 
-  if (window.innerWidth < 1700) {
-     numberOfParticles = (canvas.height * canvas.width) / 4500;
+  if (window.innerWidth < 1600) {
+     numberOfParticles = (canvas.height * canvas.width) / 3300;
 
     position1.radius = (canvas.height / 50) * (canvas.width / 80);
     mousePosition.radius = (canvas.height / 0.001) * (canvas.width / 80);
   }
-  if (window.innerWidth < 1200) {
-    numberOfParticles = (canvas.height * canvas.width) / 4700;
+  if (window.innerWidth < 1400) {
+     numberOfParticles = (canvas.height * canvas.width) / 3000;
 
-    position1.radius = (canvas.height / 30) * (canvas.width / 80);
-    mousePosition.radius = (canvas.height / 0.001) * (canvas.width / -10);
+    position1.radius = (canvas.height / 45) * (canvas.width / 80);
+    mousePosition.radius = (canvas.height / 0.001) * (canvas.width / 80);
   }
+  
 
   if (window.innerWidth < 700) {
     numberOfParticles = 0
@@ -90,9 +91,13 @@ export default function CreateCanvasParticles() {
       if (this.y > canvas.height || this.y < 0) {
         this.directionY = -this.directionY;
       }
+      var speed = 0.4
+      if (window.innerWidth < 1600) {
+        speed = 0.3
+      }
 
-      this.x += this.directionX * 0.2;
-      this.y += this.directionY * 0.2;
+      this.x += this.directionX * speed;
+      this.y += this.directionY * speed;
       this.draw();
     }
   }
@@ -145,8 +150,15 @@ export default function CreateCanvasParticles() {
         if (distance < (canvas.width / 7) * (canvas.height / 7)) {
           if (ctx !== null) {
             // prettier-ignore
-            opacityValue = 1 - (distance / 8000);
+            opacityValue = 1 - (distance / 6000);
+            if (window.innerWidth < 1600) {
+              opacityValue = 1 - (distance / 7000);
 
+            }
+            if (window.innerWidth < 1600) {
+              opacityValue = 1 - (distance / 4500);
+
+            }
             let p1x = position1.x - particlesArray[a].x;
             let p1y = position1.y - particlesArray[a].y;
 
@@ -157,8 +169,16 @@ export default function CreateCanvasParticles() {
             //}
 
             ctx.strokeStyle = `rgb(81, 162, 233, ${opacityValue / 2})`;
-
             ctx.lineWidth = 0.3;
+
+            if (window.innerWidth < 1600) {
+              ctx.strokeStyle = `rgb(81, 162, 233, ${opacityValue / 1.6})`;
+            }
+
+            if (window.innerWidth < 1400) {
+              ctx.lineWidth = 0.2;
+            }
+
             ctx.beginPath();
             ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
             ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
