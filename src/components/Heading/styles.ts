@@ -26,7 +26,9 @@ export const container = styled.div<props>`
       width: 100%;
       left: 0;
       background-color: ${({ theme }) => theme.colors.background};
-      
+      @media (max-width: 700px) {
+        display: none;
+      }
     }
 
 @media (max-width: 1450px) {
