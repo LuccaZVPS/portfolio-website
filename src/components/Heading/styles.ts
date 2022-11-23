@@ -5,7 +5,6 @@ interface props {
 }
 export const container = styled.div<props>`
   align-items: baseline;
-  color: ${({ theme }) => theme.colors.primary};
   width: fit-content;
   height: fit-content;
   display: flex;

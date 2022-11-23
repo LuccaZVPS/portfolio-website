@@ -43,8 +43,16 @@ export default function CreateCanvasParticles() {
   
 
   if (window.innerWidth < 700) {
-    numberOfParticles = 0
+    numberOfParticles = (canvas.height * canvas.width) / 7000;
+    position1.radius = (canvas.height / 45) * (canvas.width / 1);
+    mousePosition.radius = (canvas.height / 45) * (canvas.width / 30);
   }
+  if (window.innerWidth < 500) {
+    numberOfParticles = (canvas.height * canvas.width) / 5000;
+    position1.radius = (canvas.height / 45) * (canvas.width / 1);
+    mousePosition.radius = (canvas.height / 45) * (canvas.width / 30);
+  }
+
 
   class Particle {
     x: number;
@@ -79,6 +87,10 @@ export default function CreateCanvasParticles() {
           0.5;
         const distanceRatio = dotDistance / (window.innerWidth / 2.5);
         ctx.fillStyle = this.color.slice(0, -1) + `,${1 - distanceRatio})`;
+        if (window.innerWidth < 700) {
+          ctx.fillStyle = this.color
+
+        }
 
         ctx?.fill();
       }
@@ -94,6 +106,9 @@ export default function CreateCanvasParticles() {
       var speed = 0.4
       if (window.innerWidth < 1600) {
         speed = 0.3
+      }
+      if (window.innerWidth < 700) {
+        speed = 0.2
       }
 
       this.x += this.directionX * speed;
@@ -119,6 +134,15 @@ export default function CreateCanvasParticles() {
        color = "rgb(232, 73, 70)"
 
       }
+
+      if (window.innerWidth < 700) {
+         size = Math.random() * 0.05 + 1;
+      }
+      if (window.innerWidth < 500) {
+        size = Math.random() * 0.03 + 1;
+     }
+
+
       particlesArray.push(
         new Particle(x, y, directionX, directionY, size, color)
       );
@@ -159,6 +183,10 @@ export default function CreateCanvasParticles() {
               opacityValue = 1 - (distance / 4500);
 
             }
+            if (window.innerWidth < 700) {
+              opacityValue = 1 - (distance / 9000);
+
+            }
             let p1x = position1.x - particlesArray[a].x;
             let p1y = position1.y - particlesArray[a].y;
 
@@ -178,6 +206,7 @@ export default function CreateCanvasParticles() {
             if (window.innerWidth < 1400) {
               ctx.lineWidth = 0.2;
             }
+
 
             ctx.beginPath();
             ctx.moveTo(particlesArray[a].x, particlesArray[a].y);

@@ -12,7 +12,6 @@ export const container = styled.section`
 `;
 export const content = styled.div`
   position: absolute;
-  color: ${(props) => props.theme.colors.primary};
   display: flex;
   flex-direction: column;
   gap: 15px;
