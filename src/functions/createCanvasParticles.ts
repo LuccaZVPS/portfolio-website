@@ -43,15 +43,10 @@ export default function CreateCanvasParticles() {
   
 
   if (window.innerWidth < 700) {
-    numberOfParticles = (canvas.height * canvas.width) / 7000;
-    position1.radius = (canvas.height / 45) * (canvas.width / 1);
-    mousePosition.radius = (canvas.height / 45) * (canvas.width / 30);
+    numberOfParticles = 0;
+    
   }
-  if (window.innerWidth < 500) {
-    numberOfParticles = (canvas.height * canvas.width) / 5000;
-    position1.radius = (canvas.height / 45) * (canvas.width / 1);
-    mousePosition.radius = (canvas.height / 45) * (canvas.width / 30);
-  }
+ 
 
 
   class Particle {
