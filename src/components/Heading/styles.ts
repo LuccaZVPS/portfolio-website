@@ -50,7 +50,7 @@ export const container = styled.div<props>`
 
   .hidden {
     ::before {
-      animation: reverse-type ${({time}) => time} steps(${({characters}) => characters}) forwards, blink infinite 1.5s 1s;
+      animation: reverse-type ${({time}) => time} steps(${({characters}) => characters}) forwards;
     }
   }
 
@@ -64,7 +64,7 @@ export const container = styled.div<props>`
     }
     }
     ::before {
-      animation: type ${({time}) => time} steps(${({characters}) => characters}) forwards, blink infinite 1.5s 1s;
+      animation: type ${({time}) => time} steps(${({characters}) => characters}) forwards,blink linear infinite 1.5s ${({time}) => time};
     }
 
     @keyframes type {

@@ -11,7 +11,7 @@ export default function Heading(props: props): JSX.Element {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <styled.container characters={props.text.length} time={time}>
+    <styled.container  characters={props.text.length} time={time}>
       <h2 className="hidden" id={props.text}>
         {props.text}
       </h2>

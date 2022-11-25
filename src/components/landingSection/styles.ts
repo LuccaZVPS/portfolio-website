@@ -173,11 +173,13 @@ export const description = styled.div`
 
   @keyframes blink {
     0% {
-      border: none;
+      border-left: 2px solid red;
+
     }
 
     100% {
-      border-left: 2px solid red;
+      border: none;
+
     }
   }
 `;
